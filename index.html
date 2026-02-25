@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <style>
+         body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+    }
+
+    h1 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+    }
+
+    .grid table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    td {
+      width: 80px;
+      height: 80px;
+      font-size: 40px;
+      text-align: center;
+      vertical-align: middle;
+      border: 2px solid #333;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    td:hover {
+      background-color: #d1e7dd;
+    }
+    </style>
+</head>
+<body>
+    <h1>Emoji Matching Game</h1>
+
+    <button class="btn" onclick="playGame()">Play Game</button>
+    <div id="stats"></div>
+    <p id="message"></p>
+    <div class="grid" id="gameBoard"></div>
+
+    <script src="app_showEmoji.js"></script>
+</body>
+</html>
