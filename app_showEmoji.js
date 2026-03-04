@@ -1,4 +1,3 @@
-// Step 1: 2D array (pairs, same columns each row)
 let board = [
   ["🍎", "🐶", "🍕", "🐱"],
   ["🐶", "🍎", "🐱", "🍕"],
@@ -6,7 +5,6 @@ let board = [
   ["⚽", "⭐", "🎵", "🎮"]
 ];
 
-// Step 2: game state variables
 let r1 = null;   // first click row
 let c1 = null;   // first click col
 let matches = 0;
@@ -16,7 +14,7 @@ function playGame() {
   let gameBoard = document.getElementById("gameBoard");
   let html = "<table>";
 
-  // Step 3: build the table using loops
+
   for (let r = 0; r < board.length; r++) {
     html += "<tr>";
     for (let c = 0; c < board[r].length; c++) {
@@ -41,17 +39,13 @@ function playGame() {
 function cellClicked(r, c) {
   let cell = document.getElementById(`cell-${r}-${c}`);
 
-  // Step 2: show the emoji
   cell.textContent = board[r][c];
-
-  // Step 3: store first click
   if (r1 === null) {
     r1 = r;
     c1 = c;
     return;
   }
 
-  // Step 4: second click
   attempts++;
 
   let firstEmoji = board[r1][c1];
@@ -90,4 +84,5 @@ function cellClicked(r, c) {
 function displayStats() {
   document.getElementById("stats").textContent =
     "Matches: " + matches + " | Attempts: " + attempts;
+
 }
